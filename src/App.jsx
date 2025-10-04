@@ -3,8 +3,6 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Teachers from "./pages/Teachers";
 
-// test
-
 const App = () => {
   return (
     <div>
