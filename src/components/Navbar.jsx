@@ -16,7 +16,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="flex justify-between items-center px-10 md:px-20 lg:px-32 xl:px-50 py-4 md:py-6">
+    <nav className="flex justify-between items-center px-10 md:px-25 lg:px-35 xl:px-45 py-4 md:py-5">
       <Link to="/" className="flex items-center gap-2">
         <img src={logo} alt="logo" />
         <h3 className="font-semibold text-xl">LearnLingo</h3>
@@ -42,7 +42,7 @@ const Navbar = () => {
             Log in
           </p>
         </div>
-        <button className="bg-[#222831] hover:bg-[#F4C550] hover:text-black font-semibold text-white px-8 py-3 rounded-xl cursor-pointer duration-200">
+        <button className="bg-[#222831] hover:bg-[#F4C550] hover:text-black font-semibold text-white px-10 py-3 rounded-xl cursor-pointer duration-200">
           Registration
         </button>
       </div>
