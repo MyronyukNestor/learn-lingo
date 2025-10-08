@@ -1,14 +1,23 @@
+import { useContext } from "react";
 import hero from "../assets/block.png";
+import { LingoContext } from "../context/LingoContext";
 
 const Hero = () => {
+  const { theme } = useContext(LingoContext);
+
   return (
-    <div className="px-5 xl:px-27 ">
-      <div className="flex gap-6">
-        <div className="bg-[#F8F8F8] rounded-4xl flex flex-col pt-20 pr-[108px] pl-[64px]">
-          <h1 className="font-semibold text-5xl text-left w-[550px] h-[120px]">
+    <div className="px-5 xl:px-27">
+      <div className="flex justify-center gap-6">
+        <div
+          className={`rounded-4xl flex flex-col pt-20 pr-[108px] pl-[64px] ${
+            theme === "dark" ? "bg-[#222831] text-white" : "bg-[#F8F8F8]"
+          }`}
+        >
+          <h1 className="font-semibold text-5xl/15 text-left w-[550px] h-[120px] tracking-tight">
             Unlock your potential with the best
-            <i className="bg-amber-100 leading-[0.6] px-2 inline-block">
-              language
+            <i className="relative inline-block px-2 mx-2 text-[#222831]">
+              <span className="relative z-10 font-normal">language</span>
+              <span className="absolute inset-0 bg-amber-100 -bottom-0.2 top-4 rounded-xl" />
             </i>
             tutors
           </h1>
@@ -17,16 +26,16 @@ const Hero = () => {
             Elevate your language proficiency to new heights by connecting with
             highly qualified and experienced tutors.
           </p>
-          <button className="bg-[#F4C550] font-semibold rounded-xl py-4 max-w-65 cursor-pointer hover:opacity-70 duration-200 mt-8 mb-20">
+          <button className="bg-[#F4C550] text-lg text-[#222831] font-bold rounded-xl py-5 max-w-65 cursor-pointer hover:bg-[#FFDC86] duration-200 mt-8 mb-20">
             Get started
           </button>
         </div>
         <div className="">
-          <img src={hero} alt="hero" className="rounded-4xl w-[1130px]" />
+          <img src={hero} alt="hero" className="rounded-4xl " />
         </div>
       </div>
 
-      <div className="py-3">
+      <div className="py-3 px-10 md:px-25 lg:px-35 xl:px-48">
         <div className="relative rounded-lg py-6 mt-3">
           <svg
             className="absolute inset-0 w-full h-full"
@@ -47,25 +56,49 @@ const Hero = () => {
           </svg>
           <div className="relative z-10 flex justify-center gap-25">
             <div className="flex items-center gap-3">
-              <p className="text-3xl font-semibold">32,000+</p>
+              <p
+                className={`text-3xl font-semibold ${
+                  theme === "dark" && "text-white"
+                }`}
+              >
+                32,000+
+              </p>
               <p className="text-gray-600 leading-4">
                 Experienced <br /> tutors
               </p>
             </div>
             <div className="flex items-center gap-3">
-              <p className="text-3xl font-semibold">300,000+</p>
+              <p
+                className={`text-3xl font-semibold ${
+                  theme === "dark" && "text-white"
+                }`}
+              >
+                300,000+
+              </p>
               <p className="text-gray-600 leading-4">
                 5-star tutor <br /> reviews
               </p>
             </div>
             <div className="flex items-center gap-3">
-              <p className="text-3xl font-semibold">120+</p>
+              <p
+                className={`text-3xl font-semibold ${
+                  theme === "dark" && "text-white"
+                }`}
+              >
+                120+
+              </p>
               <p className="text-gray-600 leading-4">
                 Subjects <br /> taught
               </p>
             </div>
             <div className="flex items-center gap-3">
-              <p className="text-3xl font-semibold">200+</p>
+              <p
+                className={`text-3xl font-semibold ${
+                  theme === "dark" && "text-white"
+                }`}
+              >
+                200+
+              </p>
               <p className="text-gray-600 leading-4">
                 Tutor <br /> nationalities
               </p>
