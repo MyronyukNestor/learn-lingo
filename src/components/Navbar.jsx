@@ -50,11 +50,12 @@ const Navbar = () => {
       </div>
       <div className="flex items-center gap-5">
         <span
+          title={theme === "dark" ? "Turn on the light" : "Turn off the light"}
           onClick={changeTheme}
-          className={`p-1 rounded-xl duration-200 text-2xl cursor-pointer  ${
+          className={`p-1 rounded-xl duration-200 text-2xl cursor-pointer border ${
             theme === "dark"
-              ? "text-[#FFDC86] bg-[#222831] hover:bg-gray-700 border-none"
-              : "text-[#474B4F] hover:bg-gray-200 border border-gray-400"
+              ? "text-[#FFDC86] bg-[#222831] hover:bg-[#181C20] border-[#222831]"
+              : "text-[#474B4F] hover:bg-gray-200 border-gray-400"
           } `}
         >
           {theme === "dark" ? <MdLightMode /> : <MdDarkMode />}
