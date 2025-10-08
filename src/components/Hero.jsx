@@ -63,7 +63,11 @@ const Hero = () => {
               >
                 32,000+
               </p>
-              <p className="text-gray-600 leading-4">
+              <p
+                className={`leading-4 ${
+                  theme === "dark" ? "text-gray-400" : "text-gray-600"
+                }`}
+              >
                 Experienced <br /> tutors
               </p>
             </div>
@@ -75,7 +79,11 @@ const Hero = () => {
               >
                 300,000+
               </p>
-              <p className="text-gray-600 leading-4">
+              <p
+                className={`leading-4 ${
+                  theme === "dark" ? "text-gray-400" : "text-gray-600"
+                }`}
+              >
                 5-star tutor <br /> reviews
               </p>
             </div>
@@ -87,7 +95,11 @@ const Hero = () => {
               >
                 120+
               </p>
-              <p className="text-gray-600 leading-4">
+              <p
+                className={`leading-4 ${
+                  theme === "dark" ? "text-gray-400" : "text-gray-600"
+                }`}
+              >
                 Subjects <br /> taught
               </p>
             </div>
@@ -99,7 +111,11 @@ const Hero = () => {
               >
                 200+
               </p>
-              <p className="text-gray-600 leading-4">
+              <p
+                className={`leading-4 ${
+                  theme === "dark" ? "text-gray-400" : "text-gray-600"
+                }`}
+              >
                 Tutor <br /> nationalities
               </p>
             </div>
