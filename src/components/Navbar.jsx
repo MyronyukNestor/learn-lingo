@@ -20,7 +20,7 @@ const Navbar = () => {
   const { theme, changeTheme } = useContext(LingoContext);
 
   return (
-    <nav className="flex justify-between items-center px-10 md:px-25 lg:px-35 xl:px-45 2xl:px-90 py-4 md:py-5">
+    <nav className="flex justify-between items-center px-10 md:px-25 lg:px-35 xl:px-45 3xl:px-90 py-4 md:py-5">
       <Link to="/" className="flex items-center gap-2">
         <img src={logo} alt="logo" />
         <h3
