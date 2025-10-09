@@ -35,7 +35,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="py-3 px-10 md:px-25 lg:px-35 xl:px-48">
+      <div className="py-3">
         <div className="relative rounded-lg py-6 mt-3">
           <svg
             className="absolute inset-0 w-full h-full"
