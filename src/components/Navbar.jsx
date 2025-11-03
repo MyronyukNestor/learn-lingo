@@ -2,10 +2,10 @@ import { Link } from "react-router";
 import logo from "../assets/logo.png";
 import login from "../assets/log-in.png";
 import { MdDarkMode, MdLightMode } from "react-icons/md";
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { LingoContext } from "../context/LingoContext";
 
-const Navbar = () => {
+const Navbar = ({ handleOpen, setAuthMode }) => {
   const navLinks = [
     {
       name: "Home",
@@ -15,12 +15,16 @@ const Navbar = () => {
       name: "Teachers",
       path: "/teachers",
     },
+    {
+      name: "Favorites",
+      path: "/favorites",
+    },
   ];
 
   const { theme, changeTheme } = useContext(LingoContext);
 
   return (
-    <nav className="flex justify-between items-center px-10 md:px-25 lg:px-35 xl:px-45 3xl:px-90 py-4 md:py-5">
+    <nav className="flex justify-between items-center px-10 md:px-25 lg:px-35 xl:px-45 2xl:px-90 py-4 md:py-5">
       <Link to="/" className="flex items-center gap-2">
         <img src={logo} alt="logo" />
         <h3
@@ -60,7 +64,13 @@ const Navbar = () => {
         >
           {theme === "dark" ? <MdLightMode /> : <MdDarkMode />}
         </span>
-        <div className="flex gap-2 items-center cursor-pointer">
+        <div
+          onClick={() => {
+            setAuthMode("login");
+            handleOpen();
+          }}
+          className="flex gap-2 items-center cursor-pointer"
+        >
           <img src={login} alt="" />
           <p
             className={`font-semibold hover:text-[#F4C550] duration-200 ${
@@ -71,6 +81,10 @@ const Navbar = () => {
           </p>
         </div>
         <button
+          onClick={() => {
+            setAuthMode("reg");
+            handleOpen();
+          }}
           className={`font-semibold px-10 py-3 rounded-xl cursor-pointer duration-200 hover:bg-[#F4C550] ${
             theme === "dark"
               ? "bg-[#FFDC86] text-black"

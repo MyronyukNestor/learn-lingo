@@ -1,9 +1,12 @@
 import { useContext } from "react";
 import hero from "../assets/block.png";
 import { LingoContext } from "../context/LingoContext";
+import { useNavigate } from "react-router";
 
 const Hero = () => {
   const { theme } = useContext(LingoContext);
+
+  const navigate = useNavigate();
 
   return (
     <div className="px-5 xl:px-27">
@@ -26,16 +29,19 @@ const Hero = () => {
             Elevate your language proficiency to new heights by connecting with
             highly qualified and experienced tutors.
           </p>
-          <button className="bg-[#F4C550] text-lg text-[#222831] font-bold rounded-xl py-5 max-w-65 cursor-pointer hover:bg-[#FFDC86] duration-200 mt-8 mb-20">
+          <button
+            onClick={() => navigate("/teachers")}
+            className="bg-[#F4C550] text-lg text-[#222831] font-bold rounded-xl py-5 max-w-65 cursor-pointer hover:bg-[#FFDC86] duration-200 mt-8 mb-20"
+          >
             Get started
           </button>
         </div>
-        <div className="">
-          <img src={hero} alt="hero" className="rounded-4xl " />
+        <div className="aspect-[2/3]">
+          <img src={hero} alt="hero" className="rounded-4xl w-full  object-cover" />
         </div>
       </div>
 
-      <div className="py-3">
+      <div className="py-3 px-10 md:px-25 lg:px-35 xl:px-48">
         <div className="relative rounded-lg py-6 mt-3">
           <svg
             className="absolute inset-0 w-full h-full"
