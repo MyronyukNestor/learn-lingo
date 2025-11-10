@@ -26,7 +26,7 @@ const Hero = () => {
             Elevate your language proficiency to new heights by connecting with
             highly qualified and experienced tutors.
           </p>
-          <button className="bg-[#F4C550] text-lg text-[#222831] font-bold rounded-xl py-5 max-w-65 cursor-pointer hover:bg-[#FFDC86] duration-200 mt-8 mb-20">
+          <button className="bg-[#F4C550 text-lg text-[#222831] font-bold rounded-xl py-5 max-w-65 cursor-pointer hover:bg-[#FFDC86] duration-200 mt-8 mb-20">
             Get started
           </button>
         </div>
